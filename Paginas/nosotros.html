@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros</title>
+    <title>FoxView</title>
+    <link rel="icon" type="image/x-icon" href="/Imagenes/logo_f.png">
+    <link rel="stylesheet" href="../CSS/estilo.css">
 </head>
+
 <body>
-    
+    <header class="menu">
+        <nav>
+            <div class="logo">
+                <img src="../Imagenes/logo_f.png" alt="">
+            </div>
+            <div id="menuhead">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">Habitat</a></li>
+                    <li><a href="#">Especies</a></li>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><img src="images/instagram.png" alt=""></li>
+                    <li><img src="images/instagram.png" alt=""></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="contact-container">
+        <h1 class="page-title">¡Escríbenos!</h1>
+        <div class="contact-content">
+            <form action="#" method="POST" class="sketch-form sketch-box-fill">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="#" id="#" name="#" placeholder="Tu nombre aquí..." required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="#" id="#" name="#" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="#">Motivo de tu mensaje:</label>
+                    <select id="#" name="#">
+                        <option value="saludo">Un saludito!</option>
+                        <option value="duda">Tengo una duda</option>
+                        <option value="proyecto">Mas informacion</option>
+                    </select>
+                </div>
+                <div class="form-group options-group">
+                    <fieldset class="sketch-fieldset">
+                        <legend>¿Eres humano? </legend>
+                        <label><input type="radio" name="#" value="#"> Sí</label>
+                        <label><input type="radio" name="#" value="#"> No, soy un zorro</label>
+                    </fieldset>
+                    <fieldset class="sketch-fieldset">
+                        <legend>Recibir informacion al correo</legend>
+                        <label><input type="checkbox" name="#" value="#"> Suscribirme a la pagina</label>
+                    </fieldset>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+            <div class="map-container sketch-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112061.09262723042!2d-15.540152431608684!3d28.11735630635465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40950e91c097d1%3A0xab36b5ac5338ba65!2sLas%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+                    width="600%" height="450%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+
+
+<footer>
+    <div class="redes">
+        <a href="https://www.facebook.com/?locale=es_ES" target="_blank">
+            <img src="/Imagenes/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://x.com/?lang=es" target="_blank">
+            <img src="/Imagenes/x.png" alt="Twitter">
+        </a>
+        <a href="https://es.linkedin.com/" target="_blank">
+            <img src="/Imagenes/linkedin.png" alt="LinkedIn">
+        </a>
+    </div>
+
+    <div class="fox-logo">
+        <img src="/Imagenes/logo_f.png" alt="Zorro Pixel Art">
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2024 Fox View</p>
+    </div>
+</footer>
 </body>
-</html>

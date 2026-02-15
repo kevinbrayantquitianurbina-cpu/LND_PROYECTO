@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #c9710c;
+    }
+
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+.menu img{
+    float: left;
+    margin-left: 25px;
+    width: 8%;
+}
+
+.menu nav{
+background-color: antiquewhite;
+padding: .5%;
+
+}
+
+.menu ul {
+    margin-top: 30px;
+    text-align: right;
+    padding: 5px;
+}
+
+.menu li {
+    display: inline;
+    padding: 15px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(68, 32, 2);
+    font-weight: bold;
+    padding: 0, 5rem 1rem;
+
+}
+
+.menu a:hover {
+    background-color: rgb(68, 41, 0);
+    color: rgb(175, 175, 175);
+    border-radius: 20px;
+    padding: 10px;
+    font-style: italic;
+}
+
+
+.aside{
+    display: inline-block;
+    
+}
+
+
+
+.main-layout {
+    display: flex;
+    gap: 40px;
+}
+
+aside {
+    padding-top: 80px;
+    flex: 0 0 200px; 
+
+}
+
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    font-size: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sidebar-menu h2{
+    color: antiquewhite;
+}
+
+
+main {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+main img {
+    max-width: 100%;  
+    height: auto;     
+    display: block;   
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-image img {
+    margin-top: 90px;
+    width: 300px;
+    height: auto;
+}
+
+.sketch-bg-green {
+    margin-top: 90px;
+    background-color: green;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.hero-text h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+
+.card-grid {
+    color: beige;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.card {
+
+    flex: 1 1 calc(50% - 20px); 
+    min-width: 250px;
+}
+
+.sketch-box-fill {
+    background-color: rgb(153, 79, 10); 
+    padding: 30px;
+}
+
+
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column; 
+    }
+    
+    .hero {
+        flex-direction: column;
+    }
+    
+    .card {
+        flex: 1 1 100%; 
+    }
+    
+    aside {
+        display: none; 
+    }
+}
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    align-items: center;            
+    background-color: #4a2311;      
+    color: rgb(122, 224, 130);                   
+    padding: 15px 40px;             
+    margin-top: 50px;     
+    }          
+
+
+.redes {
+    display: flex;
+    gap: 15px; 
+    flex: 1;   
+}
+
+.redes img {
+    width: 35px; 
+    height: auto;
+}
+
+.redes img:hover {
+    transform: translateY(-5px); 
+}
+
+
+.fox-logo {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+.fox-logo img {
+    width: 70px; 
+}
+
+
+.copyright {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; 
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column; 
+        gap: 20px;
+        padding: 30px 20px;
+    }
+    
+    .redes { justify-content: center; }
+    .copyright { justify-content: center; text-align: center; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Contenedor de Contacto --- */
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page-title {
+    margin-top: 100px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(58, 20, 5);
+}
+
+.contact-content {
+    display: flex; 
+    gap: 30px;
+}
+
+.sketch-box-fill {
+    background-color: rgba(230, 126, 34, 0.05);
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+input[type="#"],
+input[type="#"],
+select {
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #a0522d;
+
+}
+
+input:focus, select:focus {
+    background-color: rgba(241, 189, 129, 0.5);
+}
+
+
+.options-group {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.sketch-fieldset {
+    background-color: #a0522d;
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.sketch-fieldset legend {
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.sketch-fieldset label {
+    font-size: 17px;
+    display: block;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+.submit-btn {
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #a0522d;
+}
+
+.submit-btn:hover {
+    background-color: green ;
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* Mapa*/
+.map-container {
+    height: 100%;
+    width: 100%;
+    min-height: 390px;
+    display: block;
+    padding: 5px;
+    background-color: rgb(75, 30, 30);
+    overflow: hidden;
+    flex: 1; 
+}
+
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column; 
+    }
+    .options-group {
+        flex-direction: column;
+    }
+}
