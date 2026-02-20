@@ -365,3 +365,129 @@ input:focus, select:focus {
         flex-direction: column;
     }
 }
+
+
+/* --- ESTILOS DEL CARRUSEL --- */
+
+.galeria-zorros {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+.slider-container {
+    width: 100%;
+    height: 450px; 
+    position: relative;
+    overflow: hidden; 
+    background-color: rgba(230, 126, 34, 0.1);
+    border: 2px solid #d35400;
+
+}
+
+ul.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+ul.slider li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    transition: opacity 0.6s ease-in-out;
+    z-index: 1;
+    
+}
+
+
+ul.slider li:target {
+    opacity: 1;
+    z-index: 2;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+.slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    
+}
+
+
+.slider-nav {
+    margin-top: 20px;
+}
+
+.menu-miniaturas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.thumb-link {
+    display: block;
+    width: 100px;
+    height: 70px;
+    border: 2px solid #d35400;
+    border-radius: 10px; 
+    overflow: hidden;
+    transition: transform 0.2s, border-width 0.2s;
+}
+
+.thumb-link:hover {
+    transform: scale(1.1) rotate(3deg); 
+    border-width: 3px;
+}
+
+.thumb-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 600px) {
+    .slider-container {
+        height: 300px; 
+    }
+    .thumb-link {
+        width: 70px;
+        height: 50px;
+    }
+    .slide-text {
+        font-size: 1rem;
+        width: 80%;
+        text-align: center;
+    }
+}
