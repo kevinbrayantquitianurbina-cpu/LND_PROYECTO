@@ -1,0 +1,207 @@
+/* Pega aquí exactamente el mismo bloque de "ESTILOS GENERALES (Cuerpo, Menú y Footer)" del archivo anterior */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #c9710c;
+}
+
+.menu {
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu nav {
+    background-color: antiquewhite;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu li {
+    display: inline;
+    padding: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(68, 32, 2);
+    font-weight: bold;
+    padding: 0, 5rem 1rem;
+}
+
+.menu a:hover {
+    background-color: rgb(68, 41, 0);
+    color: rgb(175, 175, 175);
+    border-radius: 20px;
+    padding: 10px;
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #4a2311;
+    color: rgb(122, 224, 130);
+    padding: 15px 40px;
+    margin-top: 50px;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.redes img {
+    width: 35px;
+    height: auto;
+}
+
+.redes img:hover {
+    transform: translateY(-5px);
+}
+
+.fox-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.fox-logo img {
+    width: 70px;
+}
+
+.copyright {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+    .copyright {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS DE HÁBITAT
+   ========================================= */
+.habitat-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Indie Flower', cursive;
+    margin-top: 40px;
+    color: rgb(58, 20, 5);
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.clean-card {
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 320px;
+    background-color: #3a6403;
+    border-radius: 12px;
+    padding: 30px;
+    color: #3a1405;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clean-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.clean-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #c9710c;
+    border-bottom: 2px solid #3b1e05;
+    padding-bottom: 10px;
+}
+
+.clean-card p,
+.clean-card ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f3eed1;
+}
+
+.clean-card ul {
+    padding-left: 20px;
+}
+
+.clean-card ul li {
+    margin-bottom: 12px;
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

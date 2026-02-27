@@ -1,0 +1,258 @@
+/* =========================================
+   ESTILOS GENERALES (Cuerpo, Menú y Footer)
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #c9710c;
+}
+
+/* Menú */
+.menu {
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu nav {
+    background-color: antiquewhite;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu li {
+    display: inline;
+    padding: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(68, 32, 2);
+    font-weight: bold;
+    padding: 0, 5rem 1rem;
+}
+
+.menu a:hover {
+    background-color: rgb(68, 41, 0);
+    color: rgb(175, 175, 175);
+    border-radius: 20px;
+    padding: 10px;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #4a2311;
+    color: rgb(122, 224, 130);
+    padding: 15px 40px;
+    margin-top: 50px;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.redes img {
+    width: 35px;
+    height: auto;
+}
+
+.redes img:hover {
+    transform: translateY(-5px);
+}
+
+.fox-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.fox-logo img {
+    width: 70px;
+}
+
+.copyright {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+    .copyright {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS DE INICIO (index.html)
+   ========================================= */
+.main-layout {
+    display: flex;
+    gap: 40px;
+}
+
+aside {
+    padding-top: 80px;
+    flex: 0 0 200px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-logo img {
+    width: 120px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.sidebar-menu h2 {
+    color: #4a2311;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4a2311;
+    padding-bottom: 5px;
+}
+
+.sidebar-menu li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f3debe;
+    background-color: rgba(74, 35, 17, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-image img {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+}
+
+.sketch-bg-green {
+    background-color: #2e5c31;
+    color: rgb(229, 238, 195);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 0;
+}
+
+.hero-text h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.card-grid {
+    color: rgb(233, 233, 196);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.sketch-box-fill {
+    background-color: #fce8d5;
+    color: #4a2311;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #0d5e0a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sketch-box-fill h3 {
+    margin-bottom: 15px;
+    color: #054412;
+    font-size: 1.4rem;
+}
+
+.sketch-box-fill p {
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    aside {
+        display: none;
+    }
+}
