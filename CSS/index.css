@@ -1,5 +1,5 @@
 /* =========================================
-   ESTILOS GENERALES (Cuerpo, Menú y Footer)
+    ESTILOS GENERALES (Cuerpo, Menú y Footer)
    ========================================= */
 * {
     box-sizing: border-box;
@@ -103,22 +103,6 @@ footer {
     font-weight: bold;
 }
 
-@media (max-width: 600px) {
-    footer {
-        flex-direction: column;
-        gap: 20px;
-        padding: 30px 20px;
-    }
-
-    .redes {
-        justify-content: center;
-    }
-
-    .copyright {
-        justify-content: center;
-        text-align: center;
-    }
-}
 
 /* =========================================
    ESTILOS ESPECÍFICOS DE INICIO (index.html)
@@ -176,18 +160,46 @@ main img {
     display: block;
 }
 
-.hero {
+/* --- SECCIÓN HERO CON VIDEO DE FONDO --- */
+.video-section {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    overflow: hidden; /* Corta lo que sobre del video */
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 40px;
 }
 
-.hero-image img {
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* Configuramos el video para que llene el fondo */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 450px;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; /* Envía el video al fondo (detrás del texto) */
 }
+
+/* El cuadro verde */
+.hero-content {
+    position: relative;
+    z-index: 1; /* Pone el texto por encima del video */
+    max-width: 600px;
+    text-align: center;
+}
+
+/* cuadro verde transparente */
+.video-section .sketch-bg-green {
+    background-color: rgba(46, 92, 49, 0.85); 
+    margin-top: 0;
+}
+
+
 
 .sketch-bg-green {
     background-color: #2e5c31;
@@ -239,20 +251,26 @@ main img {
     line-height: 1.6;
 }
 
+/* =========================================
+    MEDIA QUERIES OBLIGATORIAS (3 Tamaños)
+   ========================================= */
+
+/* 1. TABLET (Pantallas medianas) */
+@media (max-width: 1024px) {
+    .menu nav { padding: 10px; }
+    footer { padding: 15px; }
+    .slider-container { height: 350px; } 
+}
+
+/* 2. MÓVIL NORMAL (Pantallas pequeñas) */
 @media (max-width: 768px) {
-    .main-layout {
-        flex-direction: column;
-    }
+    .main-layout, .hero, .contact-content { flex-direction: column; text-align: center; }
+    aside { display: none; } /* Ocultamos la barra lateral */
+    .slider-container { height: 250px; } 
+}
 
-    .hero {
-        flex-direction: column;
-    }
-
-    .card {
-        flex: 1 1 100%;
-    }
-
-    aside {
-        display: none;
-    }
+/* 3. MÓVIL PEQUEÑO (Pantallas muy pequeñas) */
+@media (max-width: 480px) {
+    .menu ul { flex-direction: column; gap: 5px; }
+    footer { flex-direction: column; text-align: center; gap: 10px; }
 }

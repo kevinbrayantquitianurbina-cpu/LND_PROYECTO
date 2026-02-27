@@ -1,4 +1,6 @@
-/* Pega aquí exactamente el mismo bloque de "ESTILOS GENERALES (Cuerpo, Menú y Footer)" del archivo anterior */
+/* =========================================
+    ESTILOS GENERALES (Cuerpo, Menú y Footer)
+   ========================================= */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -99,22 +101,6 @@ footer {
     font-weight: bold;
 }
 
-@media (max-width: 600px) {
-    footer {
-        flex-direction: column;
-        gap: 20px;
-        padding: 30px 20px;
-    }
-
-    .redes {
-        justify-content: center;
-    }
-
-    .copyright {
-        justify-content: center;
-        text-align: center;
-    }
-}
 
 /* =========================================
    ESTILOS ESPECÍFICOS DE CONTACTO
@@ -227,12 +213,27 @@ select:focus {
     display: block;
 }
 
-@media (max-width: 768px) {
-    .contact-content {
-        flex-direction: column;
-    }
+/* =========================================
+   MEDIA QUERIES OBLIGATORIAS (3 Tamaños)
+   ========================================= */
 
-    .options-group {
-        flex-direction: column;
-    }
+/* 1. TABLET (Pantallas medianas) */
+@media (max-width: 1024px) {
+    .menu nav { padding: 10px; }
+    footer { padding: 15px; }
+    .slider-container { height: 350px; } 
+}
+
+/* 2. MÓVIL NORMAL (Pantallas pequeñas) */
+@media (max-width: 768px) {
+
+    .main-layout, .hero, .contact-content { flex-direction: column; text-align: center; }
+    .slider-container { height: 250px; } 
+}
+
+/* 3. MÓVIL PEQUEÑO (Pantallas muy pequeñas) */
+@media (max-width: 480px) {
+    .menu ul { flex-direction: column; gap: 5px; }
+    footer { flex-direction: column; text-align: center; gap: 10px; }
+    .slider-container { height: 180px; border-width: 2px; } 
 }
