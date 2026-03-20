@@ -168,9 +168,10 @@ main img {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Corta lo que sobre del video */
-    border-radius: 15px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    /* Corta lo que sobre del video */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 40px;
 }
 
@@ -181,21 +182,23 @@ main img {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    z-index: -1; /* Envía el video al fondo (detrás del texto) */
+    object-fit: cover;
+    z-index: -1;
+    /* Envía el video al fondo (detrás del texto) */
 }
 
 /* El cuadro verde */
 .hero-content {
     position: relative;
-    z-index: 1; /* Pone el texto por encima del video */
+    z-index: 1;
+    /* Pone el texto por encima del video */
     max-width: 600px;
     text-align: center;
 }
 
 /* cuadro verde transparente */
 .video-section .sketch-bg-green {
-    background-color: rgba(46, 92, 49, 0.85); 
+    background-color: rgba(46, 92, 49, 0.85);
     margin-top: 0;
 }
 
@@ -257,20 +260,75 @@ main img {
 
 /* 1. TABLET (Pantallas medianas) */
 @media (max-width: 1024px) {
-    .menu nav { padding: 10px; }
-    footer { padding: 15px; }
-    .slider-container { height: 350px; } 
+    .menu nav {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .slider-container {
+        height: 350px;
+    }
 }
 
 /* 2. MÓVIL NORMAL (Pantallas pequeñas) */
 @media (max-width: 768px) {
-    .main-layout, .hero, .contact-content { flex-direction: column; text-align: center; }
-    aside { display: none; } /* Ocultamos la barra lateral */
-    .slider-container { height: 250px; } 
+
+    .main-layout,
+    .hero,
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    aside {
+        display: none;
+    }
+
+    /* Ocultamos la barra lateral */
+    .slider-container {
+        height: 250px;
+    }
 }
 
 /* 3. MÓVIL PEQUEÑO (Pantallas muy pequeñas) */
 @media (max-width: 480px) {
-    .menu ul { flex-direction: column; gap: 5px; }
-    footer { flex-direction: column; text-align: center; gap: 10px; }
+    .menu ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* =========================================
+    ESTILOS PARA ELEMENTOS INTERACTIVOS (JS)
+   ========================================= */
+/* Función para el Ejemplo 4: Mostrar/Ocultar */
+#btnCuriosidad {
+    background-color: #d86c24;
+    border-radius: 3px;
+    border: #054412;
+    margin-top: 10px;
+    padding: 3px;
+    color: #2c4c05;
+    font-weight: bolder;
+}
+
+#btnCambiarColor {
+    padding: 10px;
+    background-color: #4a2311;
+    color: #f3debe;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    height: 30px;
+    
 }

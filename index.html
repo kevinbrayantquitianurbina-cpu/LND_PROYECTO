@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoxView</title>
-    <link rel="icon" type="image/x-icon" href="/Imagenes/logo_f.png">
+    <link rel="icon" type="image/x-icon" href="Imagenes/logo_f.png">
     <link rel="stylesheet" href="CSS/index.css">
 </head>
 
@@ -17,7 +17,7 @@
             </div>
             <div id="menuhead">
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="Paginas/habitat.html">Habitat</a></li>
                     <li><a href="Paginas/especies.html">Especies</a></li>
                     <li><a href="Paginas/nosotros.html">Sobre Nosotros</a></li>
@@ -27,10 +27,12 @@
     </header>
     <div class="main-layout">
         <aside>
+        <!-- Botón para cambiar el color de fondo -->
+        <button id="btnCambiarColor" onclick="cambiarFondo()">Cambiar a bosque 🌿</button>
             <div class="sidebar-logo">
                 <img src="Imagenes/logo_f.png" alt="">
             </div>
-            <ul class="sidebar-menu">
+            <ul class="sidebar-menu" id="listaSonidos">
                 <h2>Sonidos calsicos de zorros</h2>
                 <li>○🦊~¡AAAI-IIIIH!~</li>
                 <li>○🦊~¡YAP-YAP-YAP!~</li>
@@ -39,6 +41,7 @@
                 <li>○🦊~¡WHIIII-WHIIII!~</li>
             </ul>
         </aside>
+
         <main>
             <section class="hero video-section">
 
@@ -80,8 +83,13 @@
 
                 <article class="card sketch-box-fill">
                     <h3>✨ Curiosidades</h3>
-                    <p>¿Sabías que usan el campo magnético de la Tierra para cazar? Sus sentidos están increíblemente
-                        desarrollados.</p>
+                    <!-- Ocultamos el párrafo inicialmente con style="display: none;" -->
+                    <p id="textoCuriosidad" style="display: none;">¿Sabías que usan el campo magnético de la Tierra para
+                        cazar? Sus sentidos están increíblemente desarrollados.</p>
+
+                    <!-- Añadimos el botón del Ejemplo 4 -->
+                    <button id="btnCuriosidad" onclick="ocultarMostrar()">Revelar
+                        secreto</button>
                 </article>
 
             </section>
@@ -91,18 +99,18 @@
     <footer>
         <div class="redes">
             <a href="https://www.facebook.com/?locale=es_ES" target="_blank">
-                <img src="/Imagenes/facebook.png" alt="Facebook">
+                <img src="Imagenes/facebook.png" alt="Facebook">
             </a>
             <a href="https://x.com/?lang=es" target="_blank">
-                <img src="/Imagenes/x.png" alt="Twitter">
+                <img src="Imagenes/x.png" alt="Twitter">
             </a>
             <a href="https://es.linkedin.com/" target="_blank">
-                <img src="/Imagenes/linkedin.png" alt="LinkedIn">
+                <img src="Imagenes/linkedin.png" alt="LinkedIn">
             </a>
         </div>
 
         <div class="fox-logo">
-            <img src="/Imagenes/logo_f.png" alt="Zorro Pixel Art">
+            <img src="Imagenes/logo_f.png" alt="Zorro Pixel Art">
         </div>
 
         <div class="copyright">
@@ -113,6 +121,33 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        // Función para el Ejemplo 4: Mostrar/Ocultar
+        function ocultarMostrar() {
+            let texto = document.getElementById("textoCuriosidad");
+            let boton = document.getElementById("btnCuriosidad");
+            if (texto.style.display === "none") {
+                texto.style.display = "block";
+                boton.innerText = "Ocultar secreto";
+            } else {
+                texto.style.display = "none";
+                boton.innerText = "Revelar secreto";
+            }
+        }
+        // Función para el Ejemplo 2: Cambiar color
+        function cambiarFondo() {
+            // Comprobamos si el fondo ya está cambiado al verde oscuro
+            if (document.body.style.backgroundColor === "rgb(46, 92, 49)") {
+                // Si está verde, lo devolvemos a tu color original
+                document.body.style.backgroundColor = "#c9710c";
+            } else {
+                // Si no está verde (es la primera vez que hacemos clic), lo cambiamos
+                document.body.style.backgroundColor = "rgb(46, 92, 49)";
+            }
+        }
+
+    </script>
 </body>
 
 </html>
