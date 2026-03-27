@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+    <title>Novedades de Fox View</title>
+    <link>https://foxview.com</link> 
+    <description>Las últimas noticias y actualizaciones sobre el mundo de los zorros.</description>
+    <language>es-es</language>
+
+    <item>
+    <title>¡Nueva Galería de Especies!</title>
+    <link>https://foxview.com/Paginas/especies.html</link>
+    <description>Hemos añadido 1 nueva foto increíble a nuestra galería de especies. ¡Ven a ver una pareja de zorros!</description>
+    </item>
+
+    <item>
+    <title>Descubre el hábitat del zorro</title>
+    <link>https://foxview.com/Paginas/habitat.html</link>
+    <description>Aprende todo sobre dónde viven los zorros y cómo se adaptan a su entorno.</description>
+    </item>
+
+</channel>
+</rss>
